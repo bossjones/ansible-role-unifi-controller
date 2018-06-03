@@ -6,3 +6,11 @@
     state: restarted
     enabled: yes
   become: yes
+
+
+- name: stop_mongod
+  service:
+    name: mongodb
+    state: stopped
+    enabled: no
+  become: yes

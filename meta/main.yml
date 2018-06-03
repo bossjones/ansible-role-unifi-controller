@@ -24,6 +24,3 @@ galaxy_info:
     - lan
     - controller
     - unifi
-dependencies:
-  - src: lifeofguenter.oracle-java
-    version: 0.1.21

@@ -40,7 +40,9 @@
     - /var/lib/unifi
     - /var/run/unifi
   become: yes
-  notify: restart_unifi
+  notify:
+    - restart_unifi
+    - stop_mongo
 
 - name: perma run folder
   template:
@@ -55,4 +57,6 @@
     dest: /etc/default/unifi
     mode: 0644
   become: yes
-  notify: restart_unifi
+  notify:
+    - restart_unifi
+    - stop_mongo
